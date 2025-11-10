@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekomendasi Sepatu Lari</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rekomendasi Sepatu Lari</h1>
+
+    <form id="formSepatu">
+      <label>Lari Jarak Jauh (>15 km)?</label>
+      <select id="jarak">
+        <option value=""></option>
+        <option value="3">Ya</option>
+        <option value="2">Menengah (5–15 km)</option>
+        <option value="1">Tidak</option>
+      </select>
+
+      <label>Pelari Cepat (pace &lt; 5 menit/km)?</label>
+      <select id="kecepatan">
+        <option value=""></option>
+        <option value="2">Ya</option>
+        <option value="1">Tidak</option>
+      </select>
+
+      <label>Berapa kali berlari dalam seminggu:</label>
+      <input type="number" id="intensitas" min="0" max="7">
+
+      <button type="button" onclick="hitungRekomendasi()">Lihat Rekomendasi</button>
+      <button type="button" onclick="resetForm()" class="reset-btn">Masukkan Pilihan Lagi</button>
+    </form>
+
+    <div class="result" id="hasil">
+      <h3>Hasil Rekomendasi</h3>
+      <p id="rekomendasi"></p>
+      <p id="alasan"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
